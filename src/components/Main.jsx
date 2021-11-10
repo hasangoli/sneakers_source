@@ -1,10 +1,18 @@
 import { useState } from "react";
 import { Container, Row, Col, Image, Badge, Button } from "react-bootstrap";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { HiPlusSm, HiMinusSm } from "react-icons/hi";
+import { TiPlus, TiMinus } from "react-icons/ti";
 
 const Main = ({ cardItems, setCardItems }) => {
   const [image, setImage] = useState(0);
+  const [itemValue, setItemValue] = useState(0);
+
+  const increment = () => setItemValue(itemValue + 1);
+  const decrement = () => {
+    if (itemValue > 0) {
+      setItemValue(itemValue - 1);
+    }
+  };
 
   const item = {
     company: "Sneaker Company",
@@ -71,16 +79,23 @@ const Main = ({ cardItems, setCardItems }) => {
           <p className="text-gray fw-bold fs-6 text-decoration-line-through">
             ${item.realPrice}
           </p>
-          <Row>
-            <Col as={Row} xs={5}>
+          <Row className="d-flex justify-content-between">
+            <Col
+              as={Row}
+              className="d-flex align-self-center justify-content-evenly ms-3 bg-secondary p-2 rounded"
+              xs={4}
+            >
               <Col xs={3}>
-                <HiMinusSm />
+                <TiMinus className="input-icon" onClick={decrement} />
               </Col>
-              <Col xs={6}>
-                <input className="input" type="number" />
+              <Col
+                xs={6}
+                className="d-flex align-self-center justify-content-center"
+              >
+                <span className="input fw-bold text-heading">{itemValue}</span>
               </Col>
               <Col xs={3}>
-                <HiPlusSm />
+                <TiPlus className="input-icon" onClick={increment} />
               </Col>
             </Col>
             <Button

@@ -11,6 +11,22 @@
   }
 }
 
+.input-icon {
+  color: $primary;
+  cursor: pointer;
+
+  &:hover {
+    filter: opacity(70%);
+  }
+}
+
+.input {
+  width: 5ch;
+  border: none;
+  text-align: center;
+  background-color: $secondary;
+}
+
 .input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
