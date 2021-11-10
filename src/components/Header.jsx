@@ -33,49 +33,49 @@ const Header = () => {
         />
         <Offcanvas show={showCanvas} onHide={() => setShowCanvas(false)}>
           <Offcanvas.Header closeButton>
-            <Navbar.Brand href="/" className="pb-3">
+            <Navbar.Brand href="#" className="pb-3">
               <img src="./images/logo.svg" alt="Sneakers Logo" />
             </Navbar.Brand>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="">
-              <NavLink href="/" className="fw-bold fs-3">
+              <NavLink href="#" className="fw-bold fs-3">
                 Collections
               </NavLink>
-              <NavLink href="/" className="fw-bold fs-3">
+              <NavLink href="#" className="fw-bold fs-3">
                 Men
               </NavLink>
-              <NavLink href="/" className="fw-bold fs-3">
+              <NavLink href="#" className="fw-bold fs-3">
                 Women
               </NavLink>
-              <NavLink href="/" className="fw-bold fs-3">
+              <NavLink href="#" className="fw-bold fs-3">
                 About
               </NavLink>
-              <NavLink href="/" className="fw-bold fs-3">
+              <NavLink href="#" className="fw-bold fs-3">
                 Contact
               </NavLink>
             </Nav>
           </Offcanvas.Body>
         </Offcanvas>
 
-        <Navbar.Brand href="/" className="pb-3">
+        <Navbar.Brand href="#" className="pb-3">
           <img src="./images/logo.svg" alt="Sneakers Logo" />
         </Navbar.Brand>
 
         <Nav className="ms-1 ms-lg-3 me-auto d-none d-md-flex">
-          <NavLink className="link ms-1 ms-lg-3 py-5" href="/">
+          <NavLink className="link ms-1 ms-lg-3 py-5" href="#">
             Collections
           </NavLink>
-          <NavLink className="link ms-1 ms-lg-3 py-5" href="/">
+          <NavLink className="link ms-1 ms-lg-3 py-5" href="#">
             Men
           </NavLink>
-          <NavLink className="link ms-1 ms-lg-3 py-5" href="/">
+          <NavLink className="link ms-1 ms-lg-3 py-5" href="#">
             Women
           </NavLink>
-          <NavLink className="link ms-1 ms-lg-3 py-5" href="/">
+          <NavLink className="link ms-1 ms-lg-3 py-5" href="#">
             About
           </NavLink>
-          <NavLink className="link ms-1 ms-lg-3 py-5" href="/">
+          <NavLink className="link ms-1 ms-lg-3 py-5" href="#">
             Contact
           </NavLink>
         </Nav>
@@ -94,7 +94,7 @@ const Header = () => {
             {itemValue}
           </Badge>
         </NavLink>
-        <NavLink href="/" className="ms-0 ms-lg-4 px-0">
+        <NavLink href="#" className="ms-0 ms-lg-4 px-0">
           <Image
             className="avatar"
             src="./images/image-avatar.png"

@@ -35,6 +35,7 @@ const Main = () => {
                     setImage(index);
                   }}
                   src={thumbnail}
+                  alt={`Thumbnail No ${index}`}
                   fluid
                 />
               </Col>
