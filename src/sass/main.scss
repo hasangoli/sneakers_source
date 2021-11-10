@@ -1,0 +1,16 @@
+@import "custom";
+
+.image {
+  border-radius: 1rem;
+  border: 3px solid transparent;
+  cursor: pointer;
+
+  &.active {
+    border: 3px solid $primary;
+    filter: opacity(50%);
+  }
+}
+
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

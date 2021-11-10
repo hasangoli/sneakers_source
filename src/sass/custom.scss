@@ -1,0 +1,21 @@
+$primary: hsl(26, 100%, 55%);
+$secondary: hsl(25, 100%, 94%);
+$heading: hsl(220, 13%, 13%);
+$paragraph: hsl(219, 9%, 45%);
+$gray: hsl(220, 14%, 75%);
+$lightGray: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$lightBoxBG: hsla(0, 0%, 0%, 0.75);
+
+$theme-colors: (
+  "primary": hsl(26, 100%, 55%),
+  "secondary": hsl(25, 100%, 94%),
+  "heading": hsl(220, 13%, 13%),
+  "paragraph": hsl(219, 9%, 45%),
+  "gray": hsl(220, 14%, 75%),
+  "lightGray": hsl(223, 64%, 98%),
+  "white": hsl(0, 0%, 100%),
+  "lightBoxBG": hsla(0, 0%, 0%, 0.75),
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

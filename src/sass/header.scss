@@ -1,0 +1,43 @@
+.navbar {
+  position: relative;
+
+  .link {
+    border-bottom: 4px solid transparent;
+
+    &:hover {
+      border-bottom: 4px solid $primary;
+    }
+  }
+
+  .avatar {
+    width: 50px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+
+    &:hover {
+      border: 2px solid $primary;
+    }
+  }
+
+  .cart {
+    position: relative;
+
+    .cartIcon {
+      font-size: 1.3rem;
+      color: $paragraph;
+    }
+
+    .badge {
+      position: absolute;
+      right: 8px;
+      top: 0;
+    }
+  }
+
+  .hr {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -0.5rem;
+  }
+}
