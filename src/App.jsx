@@ -27,6 +27,7 @@ const App = () => {
 
   const [itemValue, setItemValue] = useState(0);
   const [allItems, setAllItems] = useState(0);
+  const [add, setAdd] = useState(false);
 
   return (
     <rootContext.Provider
@@ -36,6 +37,8 @@ const App = () => {
         item,
         itemValue,
         setItemValue,
+        add,
+        setAdd,
       }}
     >
       <Header />

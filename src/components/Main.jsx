@@ -7,7 +7,7 @@ import rootContext from "../context";
 const Main = () => {
   const [image, setImage] = useState(0);
 
-  const { item, itemValue, setItemValue } = useContext(rootContext);
+  const { item, itemValue, setItemValue, setAdd } = useContext(rootContext);
 
   const increment = () => setItemValue(itemValue + 1);
   const decrement = () => {
@@ -17,7 +17,7 @@ const Main = () => {
   };
 
   return (
-    <Container className="container px-md-1 px-lg-5">
+    <Container className="container px-md-1 px-lg-5 pb-5 pb-lg-0">
       <Row>
         <Col sx={12} md={6} className="p-3 p-lg-5">
           <Image
@@ -28,7 +28,7 @@ const Main = () => {
           />
           <Row>
             {item.thumbnails.map((thumbnail, index) => (
-              <Col key={index} className="mt-4">
+              <Col key={index} className="mt-4 p-2">
                 <Image
                   className={`image ${image === index ? "active" : ""}`}
                   onClick={() => {
@@ -41,12 +41,14 @@ const Main = () => {
             ))}
           </Row>
         </Col>
+
         <Col sx={12} md={6} className="p-3 p-lg-5 my-auto">
           <p className="fs-6 fw-bold text-primary text-uppercase">
             {item.company}
           </p>
           <h1 className="fw-bold mb-4">{item.title}</h1>
           <p className="text-paragraph mb-4">{item.body}</p>
+
           <Row>
             <Col xs md={3}>
               <h4 className="fw-bold">${item.price}</h4>
@@ -57,42 +59,35 @@ const Main = () => {
               </Badge>
             </Col>
             <Col className="ms-auto" xs md={12}>
-              <p className="text-gray fw-bold fs-6 text-decoration-line-through">
+              <p className="text-gray fw-bold fs-6 text-decoration-line-through text-end text-md-start">
                 ${item.realPrice}
               </p>
             </Col>
           </Row>
-          <Row className="d-flex justify-content-between mt-0 mt-lg-5">
+
+          <Row className="d-flex align-self-center justify-content-around px-2 px-md-0">
             <Col
-              as={Row}
-              className="d-flex align-self-center justify-content-around ms-lg-3 bg-secondary p-2 rounded"
               xs={12}
               md={4}
+              className="d-flex align-self-center justify-content-around bg-secondary text-center p-2 rounded"
             >
-              <Col
-                xs={4}
-                className="d-flex align-self-center justify-content-center"
-              >
+              <Col>
                 <TiMinus className="input-icon" onClick={decrement} />
               </Col>
-              <Col
-                xs={4}
-                className="d-flex align-self-center justify-content-center"
-              >
+              <Col>
                 <span className="span fw-bold text-heading">{itemValue}</span>
               </Col>
-              <Col
-                xs={4}
-                className="d-flex align-self-center justify-content-center"
-              >
+              <Col>
                 <TiPlus className="input-icon" onClick={increment} />
               </Col>
             </Col>
+
             <Button
+              onClick={() => setAdd(true)}
               as={Col}
               xs={12}
               md={7}
-              className="text-white py-2 mt-3 mt-lg-0 d-flex align-items-center justify-content-center fw-bold"
+              className="w100 text-white fw-bold d-flex align-items-center justify-content-center mt-3 mt-md-0"
             >
               <AiOutlineShoppingCart className="me-3" />
               Add to cart

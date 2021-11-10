@@ -50,6 +50,10 @@
     width: 330px;
     overflow: hidden;
 
+    .closeBtn {
+      cursor: pointer;
+    }
+
     .small {
       font-size: 0.7rem;
     }
@@ -66,6 +70,12 @@
 
     .avatar {
       width: 30px;
+    }
+
+    .card {
+      width: 80%;
+      right: 1.3rem;
+      top: 3.3rem;
     }
   }
 }
