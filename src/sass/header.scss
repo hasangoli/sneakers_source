@@ -1,4 +1,4 @@
-.navbar {
+.wrapper {
   position: relative;
 
   .link {
@@ -39,5 +39,33 @@
     width: 100%;
     left: 0;
     bottom: -0.5rem;
+  }
+
+  .card {
+    position: absolute;
+    right: 8rem;
+    top: 5rem;
+    border: none;
+    border-radius: 0.8rem !important;
+    width: 330px;
+    overflow: hidden;
+
+    .small {
+      font-size: 0.7rem;
+    }
+
+    .binIcon {
+      color: $paragraph;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    position: relative;
+
+    .avatar {
+      width: 30px;
+    }
   }
 }
