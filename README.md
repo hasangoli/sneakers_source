@@ -1,4 +1,4 @@
-# MyFolio Source
+# Sneakers Source
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) with the help of Sass and React-bootstrap to style it properly.
 
